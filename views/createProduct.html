@@ -1,0 +1,125 @@
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../Public/Style/normalize.css" />
+        <link rel="stylesheet" href="../Public/Style/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>tappazo shop</h1>
+            <nav>
+              <ul id="menuNavMain">
+                <li>
+                  <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="product.html">Productos</a>
+                  <ul class="submenuNav">
+                    <li><a href="#shoes" id="navShoes">Tenis</a></li>
+                    <li><a href="#vapers" id="navVapers">Vipers</a></li>
+                    <li><a href="#clock" id="navClock">Relojes</a></li>
+                    <li><a href="createProduct.html">crea tu producto</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </nav>
+            <figure id="carShopContentImg">
+              <img
+                src="../../Public/img/main/carShop.svg"
+                alt="Esto es el carrito de compras"
+                id="carShop"
+              />
+      
+              <div id="carShopContent">
+                <div id="headerCarShop">
+                  <figure class="blockImgOption">
+                    <img
+                      class="optionCarShop"
+                      src="../../Public/img/main/trash.svg"
+                      alt="Opciones del carrito"
+                      id="trasCar"
+                    />
+                  </figure>
+                  <figure class="blockImgOption">
+                    <img
+                      class="optionCarShop"
+                      src="../../Public/img/main/sellCar.svg"
+                      alt="Opciones del carrito"
+                      id="sellCar"
+                    />
+                  </figure>
+                  <figure class="blockImgOption">
+                    <img
+                      class="optionCarShop"
+                      src="../../Public/img/main/x.svg"
+                      alt="Opciones del carrito"
+                      id="closetCar"
+                    />
+                  </figure>
+                </div>
+      
+                <div id="listproducts">
+                  <!-- <div class="productLits">
+                    <div class="infoProductList">
+                      <p>name product</p>
+                      <p>precio: $</p>
+                      <p>cantidad:</p>
+                    </div>
+                    <figure id="trashProductList" class="iconTrashProduct">
+                      <img src="../../Public/img/main/trash.svg" alt="" />
+                    </figure>
+                  </div> -->
+                </div>
+                <div id="footerCarShop">
+                  <p>precio Total: $ 0</p>
+                </div>
+              </div>
+            </figure>
+      
+            <div id="seekerBlock">
+              <input
+                type="text"
+                name="seeker"
+                id="seekerInput"
+                placeholder="Busca tu producto"
+              />
+            </div>
+          </header>
+        <section id="sectionCreate">
+            <div id="divSection"><div class="blockOptions">
+                <label for="" class="labelOptions">Ingrese URL de imagen</label
+                ><input id="urlImg" type="text" class="inputOptions" />
+            </div>
+            <div class="blockOptions">
+                <label for="" class="labelOptions">Nombre del Producto</label
+                ><input id="nameProduct" type="text" class="inputOptions" />
+            </div>
+            <div class="blockOptions">
+                <label for="" class="labelOptions">Descripcion</label
+                ><input id="desProduct" type="text" class="inputOptions" />
+            </div>
+            <div class="blockOptions">
+                <label for="" class="labelOptions">Precio</label
+                ><input id="priceProduct" type="number" class="inputOptions" />
+            </div>
+            <div class="blockOptions">
+                <label for="" class="labelOptions">Cantidad</label
+                ><input id="quantityProduct" type="text" class="inputOptions" />
+            </div>
+            <div class="blockOptions">
+                <label for="" class="labelOptions">Categoria</label
+                ><input id="categorieProduct" type="text" class="inputOptions" />
+            </div>
+            <button id="addProduct">
+                Añadir
+            </button>
+            </div>
+        
+        </section>
+
+    </body>
+    <script type="module" src="../Public/logic/app.js"></script>
+    </html>

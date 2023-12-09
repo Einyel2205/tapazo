@@ -1,0 +1,424 @@
+:root {
+  --primaryColor: #424242;
+  --secundaryColor: rgb(105, 101, 101);
+  --textColor: rgb(255, 255, 255);
+  --boxColor: rgb(0, 183, 255);
+  --hoverItems: rgb(26, 164, 173);
+  --hoverButtons: rgb(62, 158, 248);
+}
+
+/* Navegation */
+header {
+  display: grid;
+  grid-template-columns: 20% 50% 10% 20%;
+  grid-template-rows: 90px;
+  background-color: var(--primaryColor);
+  z-index: 1;
+  position: sticky;
+  top: 0;
+
+  & h1 {
+    text-align: center;
+    margin: auto;
+    color: var(--textColor);
+    text-transform: capitalize;
+    text-shadow: 2px 1px 3px var(--hoverItems);
+  }
+
+  & nav {
+    width: 100%;
+    height: 100%;
+
+    & #menuNavMain {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      place-content: center;
+      padding-top: 10px;
+
+      & li {
+        list-style: none;
+        display: grid;
+        place-items: center;
+        grid-template-rows: 40px;
+
+        &:hover .submenuNav {
+          visibility: visible;
+        }
+
+        & a {
+          color: var(--textColor);
+          text-transform: capitalize;
+          text-decoration: none;
+
+          &:hover {
+            color: var(--hoverItems);
+            transition: 0.5s linear;
+          }
+        }
+
+        .submenuNav {
+          transition: 0.2s linear;
+          display: grid;
+          grid-template-rows: auto;
+          visibility: hidden;
+          background-color: var(--primaryColor);
+          place-items: center;
+          margin-top: 40px;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  #carShopContentImg {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+
+    & #carShop {
+      width: 90%;
+      height: 50%;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    /* carShop */
+    & #carShopContent {
+      width: 300px;
+      height: 400px;
+      display: none;
+      grid-template-columns: 100%;
+      grid-template-rows: 15% 60% 20%;
+      background-color: var(--primaryColor);
+      border-radius: 20px;
+      margin-top: 25px;
+      z-index: 1;
+
+      & #headerCarShop {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        top: 0;
+        position: sticky;
+
+        & .blockImgOption {
+          display: grid;
+          width: 50%;
+          height: 50%;
+
+          & .optionCarShop {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            cursor: pointer;
+          }
+        }
+      }
+
+      & #listproducts {
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 5px;
+        max-height: 400px;
+        overflow-y: scroll;
+
+        & .productLits {
+          display: grid;
+          grid-template-rows: 60% 40%;
+          color: var(--textColor);
+          height: 180px;
+
+          & .infoProductList {
+            padding: 0 10px;
+            text-transform: capitalize;
+            text-align: center;
+          }
+
+        }
+        & .iconTrashProduct {
+          display: grid;
+          place-content: center;
+          
+
+          & img {
+            height: 40px;
+            cursor: pointer;
+          }
+        }
+      }
+      & #footerCarShop {
+        bottom: 0;
+        position: sticky;
+        display: grid;
+        place-items: center;
+        text-transform: capitalize;
+      }
+    }
+    /* carShop */
+  }
+
+  #seekerBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & #seekerInput {
+      width: 80%;
+      border-radius: 10px;
+      height: 40px;
+      border: none;
+      padding: 0 10px;
+
+      &:hover {
+        box-shadow: 2px 2px 3px var(--boxColor);
+        transition: 0.6s linear;
+      }
+    }
+  }
+}
+
+/* Navegation */
+
+/* footer */
+footer {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 10% 40% 40%;
+  background-color: var(--primaryColor);
+  margin-top: 20px;
+  place-content: center;
+
+  & #imgFooter {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    
+  }
+
+  & #infoCompany {
+    display: grid;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  & #schedulesFooter {
+    display: grid;
+    grid-template-rows: 20% 75%;
+    row-gap: 5%;
+
+    & #titleSchedules {
+      grid-column: span;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    & #schedules {
+      display: grid;
+      grid-template-columns: repeat(2,50%);
+      text-align: center;
+    }
+  }
+}
+/* footer */
+
+/* Slider Home */
+.slider {
+  position: relative;
+  width: 50%;
+  height: 450px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 1px solid var(--boxColor);
+  box-shadow: 2px 2px 3px var(--boxColor);
+  border-radius: 20px;
+}
+.slider .slider-container {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 1.2s ease;
+  transform: translateX(0);
+}
+.slider .slider-container .slider-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .slider-container .slider-item img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.slider .slider-container .slider-item.active {
+  transform: translateX(-110%);
+}
+/* Slider home */
+
+/* mostSelledProducts */
+#mostSelledProducts {
+  height: 500px;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+  grid-template-rows: repeat(2,50%);
+  margin: 10px auto;
+  place-content: center;
+  gap: 5px;
+  /* background-image: linear-gradient(120deg, #a1c4fdb6 0%, #76bddf 100%); */
+  border-radius: 20px;
+  
+
+  & .itemProductSell {
+    width: 80%;
+    height: 80%;
+    border: 2px solid rgb(218, 218, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    & .imgProductSell {
+      width: 80%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+}
+/* mostSelledProducts */
+
+
+/* Products */
+#productsBlock {
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+  margin: 10px;
+  place-content: center;
+  gap: 10px 20px;
+
+
+  & .cardProduct {
+    display: grid;
+    grid-template-rows: 20% 10% 40% repeat(3,10%);
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid rgb(131, 131, 131);
+    padding: 10px;
+
+    &:hover {
+      background-color: rgb(156, 153, 153);
+      transition: 1s ease-in-out;
+      box-shadow: 4px 2px 4px rgb(156, 153, 153);
+      border: none;
+    }
+
+    .blockImgProduct {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+    }
+    & .titleCard {
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    & .descriptionCard {
+      text-align: center;
+      padding: 0 10px;
+      margin: auto;
+    }
+
+    & .priceCard {
+      text-align: center;
+    }
+
+    & .quantityCard {
+      text-align: center;
+    }
+
+    & .addCart {
+      width: 50%;
+      height: 80%;
+      margin: 0 auto;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--hoverButtons);
+        box-shadow: 2px 2px 4px var(--hoverItems);
+      }
+    }
+  }
+}
+/* Products */
+
+/* Create Product*/
+#sectionCreate{
+
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+
+  & #divSection{
+    width: 40%;
+    margin: auto;
+    z-index: 2;
+    margin-top: 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 4px 4px blue;
+
+      & .blockOptions {
+        width: 90%;
+        display: grid;
+        grid-template-rows: 30% 70%;
+        height: 60px;
+
+        & .labelOptions{
+          text-align: center;
+        }
+        & .inputOptions{
+          border: 1px solid black;
+          width: 70%;
+          height: 80%;
+          margin: auto;
+          border-radius: 20px;
+
+          &:hover{
+            box-shadow: 
+            2px 2px 4px var(--hoverItems);
+          }
+        }
+        
+      }
+      & #addProduct{
+        height: 30px;
+        width: 40%;
+        border-radius: 20px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        
+        &:hover{
+          box-shadow: 2px 4px 4px lightblue;
+        }
+      }
+  }
+  
+}

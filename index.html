@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Public/Style/normalize.css" />
+    <link rel="stylesheet" href="Public/Style/style.css" />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <header>
+      <h1>tappazo shop</h1>
+      <nav>
+        <ul id="menuNavMain">
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="./views/product.html">Productos</a>
+            <ul class="submenuNav">
+              <li><a href="./views/product.html#shoes" id="navShoes">Tenis</a></li>
+              <li><a href="./views/product.html#vapers" id="navVapers">Vipers</a></li>
+              <li><a href="./views/product.html#clock" id="navClock">Relojes</a></li>
+              <li><a href="./views/createProduct.html">crea tu producto</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+      <figure id="carShopContentImg">
+        <img
+          src="Public/img/main/carShop.svg"
+          alt="Esto es el carrito de compras"
+          id="carShop"
+        />
+
+        <div id="carShopContent">
+          <div id="headerCarShop">
+            <figure class="blockImgOption">
+              <img
+                class="optionCarShop"
+                src="Public/img/main/trash.svg"
+                alt="Opciones del carrito"
+                id="trasCar"
+              />
+            </figure>
+            <figure class="blockImgOption">
+              <img
+                class="optionCarShop"
+                src="Public/img/main/sellCar.svg"
+                alt="Opciones del carrito"
+                id="sellCar"
+              />
+            </figure>
+            <figure class="blockImgOption">
+              <img
+                class="optionCarShop"
+                src="Public/img/main/x.svg"
+                alt="Opciones del carrito"
+                id="closetCar"
+              />
+            </figure>
+          </div>
+
+          <div id="listproducts">
+            <!-- <div class="productLits">
+              <div class="infoProductList">
+                <p>name product</p>
+                <p>precio: $</p>
+                <p>cantidad:</p>
+              </div>
+              <figure id="trashProductList" class="iconTrashProduct">
+                <img src="../../Public/img/main/trash.svg" alt="" />
+              </figure>
+            </div> -->
+          </div>
+          <div id="footerCarShop">
+            <p>precio Total: $ 0</p>
+          </div>
+        </div>
+      </figure>
+
+      <div id="seekerBlock">
+        <input
+          type="text"
+          name="seeker"
+          id="seekerInput"
+          placeholder="Busca tu producto"
+        />
+      </div>
+    </header>
+
+    <section class="slider">
+      <div class="slider-container">
+        <div class="slider-item">
+          <img
+            src="Public/img/products/vapers/geek vape aegis legend.png"
+            alt="Imagen 1"
+          />
+        </div>
+        <div class="slider-item">
+          <img
+            src="Public/img/products/clock/reloj cartier ronde en cuero.png"
+            alt="Imagen 2"
+          />
+        </div>
+        <div class="slider-item">
+          <img
+            src="Public/img/products/shoes/adidas nikanor negro-gris.png"
+            alt="Imagen 3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="mostSelledProducts">
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/clock/rolex Milgauss.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/shoes/adidas nikanor negro-gris.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/vapers/geek_vape_flint black.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/clock/rolex Yacht-Master black-rose.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/shoes/airForce1 Black.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+      <figure class="itemProductSell">
+        <img
+          src="Public/img/products/vapers/vape dragE60 light rose.png"
+          alt=""
+          class="imgProductSell"
+        />
+      </figure>
+    </section>
+
+    <footer>
+      <img id="imgFooter" src="Public/img/main/logoCompany.jpeg" alt="" />
+      <div id="infoCompany">
+        <p>Angel stiven velez</p>
+        <p>&copy; 2023 tappazo shop</p>
+      </div>
+      <div id="schedulesFooter">
+        <p id="titleSchedules">horarios de atencion</p>
+        <div id="schedules">
+          <p>
+            Lunes a viernes: 7Am - 10Pm <br />
+            Sabados: 12am - 7Pm <br />
+          </p>
+          <p>
+            Domingos: Sin servicios <br />
+            Festivos: 1Pm - 7Pm
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="Public/logic/app.js"></script>
+</html>
